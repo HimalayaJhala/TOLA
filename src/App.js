@@ -145,16 +145,19 @@ function App() {
             ref={(el) => (imgRefs.current[0] = el)}
             className="z-10 opacity-0 absolute h-[600px] w-[600px] "
             src="/model2.avif"
+            alt="model"
           />
           <img
             ref={(el) => (imgRefs.current[1] = el)}
             className="z-10 opacity-0 absolute h-[600px] w-[600px] "
             src="/model1.avif"
+            alt="model"
           />
           <img
             ref={(el) => (imgRefs.current[2] = el)}
             className="z-10 opacity-0 absolute h-[600px] w-[600px] "
             src="/model3.avif"
+            alt="model"
           />
         </div>
 
@@ -164,16 +167,20 @@ function App() {
               ref={leftImg}
               className="z-10  absolute h-[600px] w-[600px] "
               src="/model2.avif"
+              alt="model"
             />
+
             <img
               ref={centerImg}
               className="z-10 absolute h-[600px] w-[600px] "
               src="model1.avif"
+              alt="model"
             />
             <img
               ref={rightImg}
               className="z-10  absolute h-[600px] w-[600px] "
               src="/model4th.avif"
+              alt="model"
             />
           </div>
         </div>
@@ -217,18 +224,21 @@ function App() {
               <img
                 className="z-10 opacity-1  h-[600px] w-[600px] "
                 src="/model3.avif"
+                alt="model"
               />
             </div>
             <div className="flex justify-end">
               <img
                 className="z-10 opacity-1  h-[600px] w-[600px] "
                 src="model3.avif"
+                alt="model"
               />
             </div>
             <div className="flex justify-start">
               <img
                 className="z-10 opacity-1  h-[600px] w-[600px] "
                 src="/model3.avif"
+                alt="model"
               />
             </div>
           </div>
