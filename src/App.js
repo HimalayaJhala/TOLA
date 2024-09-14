@@ -9,7 +9,6 @@ function App() {
   const h3Refs = useRef([]);
   const headername = useRef([]);
   const imgRefs = useRef([]);
-  const intropara = useRef([]);
 
   const leftImg = useRef(null);
   const rightImg = useRef(null);
@@ -145,17 +144,17 @@ function App() {
           <img
             ref={(el) => (imgRefs.current[0] = el)}
             className="z-10 opacity-0 absolute h-[600px] w-[600px] "
-            src={`${process.env.PUBLIC_URL}/model2.avif`}
+            src="/model2.avif"
           />
           <img
             ref={(el) => (imgRefs.current[1] = el)}
             className="z-10 opacity-0 absolute h-[600px] w-[600px] "
-            src={`${process.env.PUBLIC_URL}/model1.avif`}
+            src="/model1.avif"
           />
           <img
             ref={(el) => (imgRefs.current[2] = el)}
             className="z-10 opacity-0 absolute h-[600px] w-[600px] "
-            src={`${process.env.PUBLIC_URL}/model3.avif`}
+            src="/model3.avif"
           />
         </div>
 
@@ -164,17 +163,17 @@ function App() {
             <img
               ref={leftImg}
               className="z-10  absolute h-[600px] w-[600px] "
-              src={`${process.env.PUBLIC_URL}/model2.avif`}
+              src="/model2.avif"
             />
             <img
               ref={centerImg}
               className="z-10 absolute h-[600px] w-[600px] "
-              src={`${process.env.PUBLIC_URL}/model1.avif`}
+              src="model1.avif"
             />
             <img
               ref={rightImg}
               className="z-10  absolute h-[600px] w-[600px] "
-              src={`${process.env.PUBLIC_URL}/model4th.avif`}
+              src="/model4th.avif"
             />
           </div>
         </div>
@@ -197,7 +196,7 @@ function App() {
               elements to create jewelry that feels both timeless and
               cutting-edge. Each piece is meticulously handcrafted, ensuring
               exceptional quality and precision. Our design philosophy centers
-              on creating jewelry that reflects the wearer’s personal story. We
+              on creating jewelry that reflects the wearers personal story. We
               believe that jewelry should be more than just an accessory; it
               should be an expression of identity and a celebration of special
               moments. To achieve this, we blend high-quality materials with
@@ -207,7 +206,7 @@ function App() {
               fashion trends while remaining committed to creating designs that
               transcend fleeting styles. Our goal is to offer pieces that not
               only complement current fashion but also stand the test of time.
-              Whether you’re seeking an elegant engagement ring, a thoughtful
+              Whether you are seeking an elegant engagement ring, a thoughtful
               gift, or a personal indulgence, TOLA offers a collection that
               blends classic elegance with a modern twist. Sustainability and
               ethical practices are central to our values.
@@ -217,19 +216,19 @@ function App() {
             <div className="flex justify-start">
               <img
                 className="z-10 opacity-1  h-[600px] w-[600px] "
-                src={`${process.env.PUBLIC_URL}/model3.avif`}
+                src="/model3.avif"
               />
             </div>
             <div className="flex justify-end">
               <img
                 className="z-10 opacity-1  h-[600px] w-[600px] "
-                src={`${process.env.PUBLIC_URL}/model3.avif`}
+                src="model3.avif"
               />
             </div>
             <div className="flex justify-start">
               <img
                 className="z-10 opacity-1  h-[600px] w-[600px] "
-                src={`${process.env.PUBLIC_URL}/model3.avif`}
+                src="/model3.avif"
               />
             </div>
           </div>
