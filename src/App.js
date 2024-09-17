@@ -295,7 +295,7 @@ function App() {
               <h3 className=" flex flex-row text-white text-[18px] items-center p-10 ">
                 <img
                   src="/icon8location.png"
-                  className=" w-5 h-5 bg-transparent mr-2"
+                  className=" w-[1vw] h-[1.75vh] bg-transparent mr-2"
                   alt="logo"
                 />
                 Store
@@ -337,7 +337,7 @@ function App() {
                     <p>
                       <img
                         ref={logospin}
-                        className="  w-[280px] z-50 flex overflow-x-hidden"
+                        className="  w-[15vw] z-50 flex overflow-x-hidden"
                         src="/logo3r.png"
                         alt="logo"
                       />
@@ -383,46 +383,48 @@ function App() {
             </p>
           </div>
           {/* frist corousel */}
-          <div className="mt-[50px]  bg-black pt-10 pb-32   ">
-            <div className=" flex flex-col md:flex-row justify-center w-screen gap-10    h-[700px] mb-[10px] ">
+          <div className="mt-[50px]  bg-black pt-10 pb-[10vh]   ">
+            <div className=" flex flex-col md:flex-row justify-center w-screen gap-10 h-[80vh]    mb-[10px] ">
               <div
                 ref={leftImg}
-                className=" p-5 pt-20  gap-8 bg-[#f7eac9] flex flex-col items-center absolute  h-auto "
+                className="flex flex-col p-5  pt-20 gap-8 bg-[#f7eac9] items-center  h-auto absolute l "
               >
                 <img
-                  className=" p-5 w-[28vw] max-h-[600px] object-cover"
-                  src="/model2.avif"
+                  className=" w-[28vw] p-5 object-cover "
+                  src="model4.avif"
                   alt="model"
                 />
+
                 <div>
                   <h1 className="text-[20px]">Duomo Milan</h1>
-                  <p className=" flex  text-start items-center relative pt-5 h-[200px] w-[400px] text-black">
-                    emeralds are elegantly set in sleek, contemporary designs
-                    that reflect the new-age spirit of TOLA, where minimalism
-                    meets sophistication.
+                  <p className=" flex  text-start items-center  align-middle relative pt-5 h-[24vh] w-[24vw] text-balck">
+                    The emeralds are elegantly set in sleek, contemporary
+                    designs that reflect the new-age spirit of TOLA, where
+                    minimalism meets sophistication.
                   </p>
-                  <button className=" underline text-black  p-5">
+                  <button className=" underline text-black p-5 ">
                     Read more
                   </button>
                 </div>
               </div>
               <div
                 ref={centerImg}
-                className="flex flex-col pt-20 p-5 gap-8  bg-[#f7eac9] items-center  h-auto absolute  "
+                className="flex flex-col p-5  pt-20 gap-8 bg-[#f7eac9] items-center  h-auto absolute l "
               >
                 <img
-                  className=" p-5 w-[28vw] max-h-[600px] object-cover"
-                  src="/model4th.avif"
+                  className=" w-[28vw] p-5 object-cover "
+                  src="model4th.avif"
                   alt="model"
                 />
+
                 <div>
-                  <h1 className="text-[20px]">Millenia</h1>
-                  <p className=" flex  text-start items-center align-middle relative pt-5 h-[200px] w-[400px] text-black">
-                    Our rings and bracelets feature flawless emeralds, each
-                    hand-selected for their vibrant green hue and unparalleled
-                    clarity.
+                  <h1 className="text-[20px]">Duomo Milan</h1>
+                  <p className=" flex  text-start items-center  align-middle relative pt-5 h-[24vh] w-[24vw]  text-balck">
+                    The emeralds are elegantly set in sleek, contemporary
+                    designs that reflect the new-age spirit of TOLA, where
+                    minimalism meets sophistication.
                   </p>
-                  <button className=" underline text-black p-5">
+                  <button className=" underline text-black p-5 ">
                     Read more
                   </button>
                 </div>
@@ -439,7 +441,7 @@ function App() {
 
                 <div>
                   <h1 className="text-[20px]">Duomo Milan</h1>
-                  <p className=" flex  text-start items-center  align-middle relative pt-5 h-[200px] w-[400px] text-balck">
+                  <p className=" flex  text-start items-center  align-middle relative pt-5 h-[24vh] w-[24vw]  text-balck">
                     The emeralds are elegantly set in sleek, contemporary
                     designs that reflect the new-age spirit of TOLA, where
                     minimalism meets sophistication.
@@ -457,11 +459,11 @@ function App() {
             <div className="flex flex-col pb-36">
               <div ref={slide1} className="flex justify-start  items-center">
                 <img
-                  className="z-10   h-[800px] w-1/2"
+                  className="z-10   w-[45vw]"
                   src="/model1.avif"
                   alt="model"
                 />
-                <p1 className="pt-[320px]  pb-[320px] pl-24 pr-24 text-[18px] bg-gray-950">
+                <p1 className="px-[10vw]  py-[21vw] pl-24 pr-24 text-[18px] bg-gray-950">
                   Their minimalist design makes them versatile, perfect for any
                   outfit—from casual daywear to refined evening attire.
                 </p1>
@@ -470,7 +472,7 @@ function App() {
                 ref={slide2}
                 className="flex justify-end mt-[200px] items-center "
               >
-                <p1 className="pt-[320px]  pb-[320px] pl-24 pr-24 text-[18px] bg-gray-950">
+                <p1 className="px-[10vw]  py-[21vw]pl-24 pr-24 text-[18px] bg-gray-950">
                   Our rings and bracelets feature flawless emeralds, each
                   hand-selected for their vibrant green hue and unparalleled
                   clarity. The emeralds are elegantly set in sleek, contemporary
@@ -478,7 +480,7 @@ function App() {
                   minimalism meets sophistication.
                 </p1>
                 <img
-                  className="z-10 opacity-1  h-[800px] w-1/2 "
+                  className="z-10 opacity-1 w-[45vw] "
                   src="model2.avif"
                   alt="model"
                 />
@@ -488,11 +490,11 @@ function App() {
                 className="flex justify-start mt-[200px] items-center"
               >
                 <img
-                  className="z-10 opacity-1 h-[800px] w-1/2"
+                  className="z-10 opacity-1 w-[45vw]"
                   src="/model3.avif"
                   alt="model"
                 />
-                <p1 className="pt-[320px]  pb-[320px] pl-24 pr-24 text-[18px] bg-gray-950">
+                <p1 className="px-[10vw]  py-[21vw]pl-24 pr-24 text-[18px] bg-gray-950">
                   The necklace features a sleek, modern chain design accented
                   with sparkling diamonds, meticulously set to capture light
                   from every angle. The industrial aesthetic of the chain
@@ -549,7 +551,7 @@ function App() {
               />
             </div>
             <div className="flex items-center justify-center bg-amber-300  pt-0 pb-12">
-              <button className="bg-black p-5 text-white w-[200px]">
+              <button className="bg-black p-5 text-white w-[10vw]">
                 Join the club
               </button>
             </div>
@@ -559,7 +561,7 @@ function App() {
             <div>
               <div className="w-full flex justify-center p-20 ">
                 <img
-                  className="  w-[100px]   mt-8 "
+                  className="  w-[8vw]   mt-8 "
                   src="/logobwr.png"
                   alt="logo"
                 />
