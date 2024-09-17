@@ -230,6 +230,9 @@ function App() {
 
     // First, scale the logo
     tl.to(logospin.current, {
+      x: 220,
+      y: 1000,
+      rotationZ: 1440,
       scale: 20, // Gradually increases size
       ease: "linear", // Smooth transition
       duration: 50, // You can adjust duration here to match scroll behavior
@@ -384,7 +387,7 @@ function App() {
           </div>
           {/* frist corousel */}
           <div className="mt-[50px]  bg-black pt-10 pb-[10vh]   ">
-            <div className=" flex flex-col md:flex-row justify-center w-screen gap-10 h-[80vh]    mb-[10px] ">
+            <div className=" flex flex-col md:flex-row justify-center w-screen gap-10 h-[110vh]    mb-[10px] ">
               <div
                 ref={leftImg}
                 className="flex flex-col p-5  pt-20 gap-8 bg-[#f7eac9] items-center  h-auto absolute l "
@@ -455,7 +458,6 @@ function App() {
           </div>
           {/* POP up larger slides */}
           <div className="flex flex-col text-white  text-center justify-center">
-            <div className="flex pb-[300px]"></div>
             <div className="flex flex-col pb-36">
               <div ref={slide1} className="flex justify-start  items-center">
                 <img
