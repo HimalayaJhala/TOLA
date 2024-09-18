@@ -285,17 +285,28 @@ function App() {
       }
     );
   }, []);
+  //headline
+  const headingRef1 = useRef(null);
+  const headingRef2 = useRef(null);
 
+  useEffect(() => {
+    gsap.to([headingRef1.current, headingRef2.current], {
+      x: "-100%", // Moves the divs to the left by 100%
+      ease: "linear",
+      duration: 10, // Speed of the animation
+      repeat: -1, // Infinite loop
+    });
+  }, []);
   return (
     <div className="flex w-screen">
       <div className=" bg-black  w-screen h-fit">
-        <nav className="flex bg-black sticky top-0 z-50  justify-between">
+        <nav className="flex bg-[#D5B17E]/30 sticky top-0 z-50  justify-between overflow-hidden">
           <div className=" text-[25px] h-fit  normal-case  text-center">
             <h3
               ref={(el) => (h3Refs.current[0] = el)}
-              className="text-white text-[18px] flex justify-center text-right align-middle items-center  ml-8 font-mono  normal-case "
+              className="text-black text-[18px] flex justify-center text-right align-middle items-center  ml-8 font-mono  normal-case "
             >
-              <h3 className=" flex flex-row text-white text-[18px] items-center p-10 ">
+              <h3 className=" flex flex-row text-black text-[18px] items-center p-10 ">
                 <img
                   src="/icon8location.png"
                   className=" w-[1vw] h-[1.75vh] bg-transparent mr-2"
@@ -305,6 +316,19 @@ function App() {
               </h3>
             </h3>
           </div>
+
+          <div className="flex justify-center items-center  text-white text-[30px] font-serif relative left-32">
+            <h6
+              style={{
+                transform: "scaleY(1.15)",
+                transformOrigin: "top",
+                fontWeight: "50",
+              }}
+            >
+              TOLA & Co.
+            </h6>
+          </div>
+
           <div className="flex gap-20 p-10 ">
             <h3
               ref={(el) => (h3Refs.current[1] = el)}
@@ -326,74 +350,136 @@ function App() {
             </h3>
           </div>
         </nav>
-        <div className=" overflow-hidden ">
-          <div className="mt-[250px] flex flex-col justify-center items-center relative  ">
-            <div className="text-[250px] text-white relative z-20    text-center font-normal  leading-none  ">
-              {/* TOLA MAIN */}
-              <h1 className=" font-serif mb-20">
-                <p
-                  ref={headingRef}
-                  className="text-[250px] text-white z-20 relative g text-center font-normal  "
-                >
-                  <h3 className="flex flex-row ">
-                    <p className="text-[250px] text-white ml-10 ">T</p>
-                    <p>
-                      <img
-                        ref={logospin}
-                        className="  w-[15vw] z-50 flex overflow-x-hidden"
-                        src="/logo3r.png"
-                        alt="logo"
-                      />
-                    </p>
+        <div className=" overflow-hidden bg-black text-white ">
+          <div>
+            <video
+              className="absolute top-0 left-0 w-full h-full object-cover rounded-3xl"
+              autoPlay
+              // src="//media.tiffany.com/is/content/tiffanydm/2024_ICONS_BC_HP_VIDEO1_Desktop"
+              src="https://media.bulgari.com/video/upload/f_auto,q_auto:best/v1722845480/hp/bvlgari-tubogas/tubogas-homepage-16x9_hu70zi.mp4"
+              loop
+              muted
+            />
+            <div className="mt-[250px] flex flex-col justify-center items-center relative  ">
+              <div className="text-[250px] text-black relative z-20    text-center font-normal  leading-none  ">
+                {/* TOLA MAIN */}
+                <h1 className=" font-serif ">
+                  <p
+                    ref={headingRef}
+                    className="text-[250px] text-slate-900 z-20 relative g text-center font-normal  "
+                  >
+                    <h3 className="flex flex-row ">
+                      <p className="text-[250px]  ml-10 ">T</p>
+                      <p>
+                        <img
+                          ref={logospin}
+                          className="  w-[15vw] z-50 flex overflow-x-hidden"
+                          src="/logo3r.png"
+                          alt="logo"
+                        />
+                      </p>
 
-                    <p className="text-[250px] text-white">L</p>
-                    <p className="text-[250px] ml-10 text-white">A</p>
-                  </h3>
-                </p>
-              </h1>
+                      <p className="text-[250px] ">L</p>
+                      <p className="text-[250px] ml-10 ">A</p>
+                    </h3>
+                  </p>
+                </h1>
+              </div>
+            </div>
+
+            <div className="grid grid-rows-2 gap-0 flex-col justify-items-center  ">
+              <p
+                ref={paragraphRef}
+                className="  text-center text-black text-[16px] relative  font-light pr-20 h-fit    pl-20  w-[50%] "
+              >
+                Ancient tradition with contemporary flair. Our brand is
+                dedicated to creating jewelry with historic craftsmanship and
+                modern design.
+              </p>
+              <div className="flex flex-col relative top-[-10vh]  w-[80%] justify-start text-black">
+                <div>
+                  <h1 className="text-[30px] font-serif opacity-80">
+                    Go with the flow
+                  </h1>
+                  <p className="text-[20px]">Embrace the perfection</p>
+                </div>
+                <div className=" flex gap-14 mt-8">
+                  <button className=" bg-[#e6bb4e] py-2 px-10 text-black ">
+                    Shop now
+                  </button>
+                  <button className="bg-[#e6bb4e] py-2  px-10 text-black ">
+                    Discover more{" "}
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* Little intro */}
+            <div
+              ref={paragraphRef}
+              className="  flex flex-col relative  bg-[#D5B17E] w-full min-h-[10vh] py-20 text-center items-center  justify-items-center gap-6"
+            >
+              <h6 className="text-[25px]">Masters of Gold Since 1800</h6>
+              <p className="text-[14px] max-w-[800px] ">
+                Ancient tradition with contemporary flair. Our brand is
+                dedicated to creating jewelry with historic craftsmanship and
+                modern design.
+              </p>
             </div>
           </div>
-          {/* since 1800 */}
-          <div className="grid grid-rows-2  flex-col justify-items-center  ">
-            <h5
-              ref={paragraphRef}
-              className="text-[20px] relative top-[-40px]  text-white items-center h-fit flex opacity-45"
+          {/* TOLA headline
+           */}
+          <div className="flex overflow-hidden w-full gap-5">
+            <div
+              ref={headingRef1}
+              className="flex text-[50px] gap-8 whitespace-nowrap"
             >
-              Since 1800's
-            </h5>
-            <div className="flex flex-col relative top-[-60px] gap-12 w-[80%] justify-start text-white">
-              <div>
-                <h1 className="text-[30px] font-serif opacity-80">
-                  Go with the flow
-                </h1>
-                <p className="text-[20px]">Embrace the perfection</p>
-              </div>
-              <div className=" flex gap-14">
-                <button className=" bg-[#e6bb4e] py-2 px-10 text-black ">
-                  Shop now
-                </button>
-                <button className="bg-[#e6bb4e] py-2  px-10 text-black ">
-                  Discover more{" "}
-                </button>
-              </div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div> <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
             </div>
-            <p
-              ref={paragraphRef}
-              className="  text-center text-white text-[16px] relative top-[-470px] font-light pr-20 pt-48 mt-14 mb-32  pl-20  w-[50%] "
+            <div
+              ref={headingRef2}
+              className="flex text-[50px] gap-8 whitespace-nowrap"
             >
-              Ancient tradition with contemporary flair. Our brand is dedicated
-              to creating jewelry with historic craftsmanship and modern design.
-            </p>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+              <div>TOLA</div>
+            </div>
           </div>
           {/* frist corousel */}
-          <div className="mt-[50px]  bg-black pt-10 pb-[10vh]   ">
-            <div className=" flex flex-col md:flex-row justify-center w-screen gap-10 h-[110vh]    mb-[10px] ">
+          <div className="mt-[50px]  pt-10 pb-[10vh]   ">
+            <div className=" flex flex-col md:flex-row justify-center w-screen gap-10 h-[100vh]    mb-[10px] ">
               <div
                 ref={leftImg}
-                className="flex flex-col p-5  pt-20 gap-8 bg-[#f7eac9] items-center  h-auto absolute l "
+                className="flex flex-col p-5  pt-20 gap-8 bg-[#D5B17E]  items-center  h-auto absolute rounded-3xl  "
               >
                 <img
-                  className=" w-[28vw] p-5 object-cover "
+                  className=" w-[28vw] p-5 object-cover rounded-3xl "
                   src="model4.avif"
                   alt="model"
                 />
@@ -412,10 +498,10 @@ function App() {
               </div>
               <div
                 ref={centerImg}
-                className="flex flex-col p-5  pt-20 gap-8 bg-[#f7eac9] items-center  h-auto absolute l "
+                className="flex flex-col p-5  pt-20 gap-8 bg-[#D5B17E] items-center  h-auto absolute rounded-3xl "
               >
                 <img
-                  className=" w-[28vw] p-5 object-cover "
+                  className=" w-[28vw] p-5 object-cover rounded-3xl "
                   src="model4th.avif"
                   alt="model"
                 />
@@ -434,10 +520,10 @@ function App() {
               </div>
               <div
                 ref={rightImg}
-                className="flex flex-col p-5  pt-20 gap-8 bg-[#f7eac9] items-center  h-auto absolute l "
+                className="flex flex-col p-5  pt-20 gap-8 bg-[#D5B17E] items-center  h-auto absolute rounded-3xl "
               >
                 <img
-                  className=" w-[28vw] p-5 object-cover "
+                  className=" w-[28vw] p-5 object-cover rounded-3xl "
                   src="model1.avif"
                   alt="model"
                 />
@@ -456,52 +542,80 @@ function App() {
               </div>
             </div>
           </div>
+          <div
+            ref={slide1}
+            className="  flex justify-center items-center p-10 bg-[#D5B17E] text-[50px] font-medium font-serif text-black"
+          >
+            <p>Makes waves </p>
+          </div>
           {/* POP up larger slides */}
-          <div className="flex flex-col text-white  text-center justify-center">
-            <div className="flex flex-col pb-36">
-              <div ref={slide1} className="flex justify-start  items-center">
-                <img
-                  className="z-10   w-[45vw]"
-                  src="/model1.avif"
-                  alt="model"
+          <div className="flex flex-col   text-center justify-center">
+            <div className="flex flex-col  pb-36">
+              <div
+                ref={slide1}
+                className="flex justify-start items-center bg-[#D5B17E]"
+              >
+                <video
+                  className="z-10 w-[46.7vw] rounded-3xl"
+                  src="https://asset.swarovski.com/videos/f_auto,q_auto,w_1024,h_1365,c_fill/so_0,eo_6/swa-cms/videos/SW_HANDS_SUBLIMA_WHITE_4x5_ENDLOGO/CM_port.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 />
-                <p1 className="px-[10vw]  py-[21vw] pl-24 pr-24 text-[18px] bg-gray-950">
+                <p className="px-[10vw] py-[21vw] pl-24 pr-24 text-[18px]">
                   Their minimalist design makes them versatile, perfect for any
                   outfit—from casual daywear to refined evening attire.
-                </p1>
+                </p>
               </div>
+
               <div
                 ref={slide2}
-                className="flex justify-end mt-[200px] items-center "
+                className="flex flex-col justify-end mt-[200px] items-center  bg-[#D5B17E]"
               >
-                <p1 className="px-[10vw]  py-[21vw]pl-24 pr-24 text-[18px] bg-gray-950">
+                <video
+                  className="z-10 w-[50vw] h-[60vh] rounded-3xl "
+                  src="https://asset.swarovski.com/videos/f_auto,q_auto,w_1024,h_576,c_fill/so_15,du_5/swa-cms/videos/5117703_1920_1080/LPT_M.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                <p1 className="px-[10vw] w-[80%]  py-[1vw] pl-24 pr-24 text-[18px] relative top-[-20px] ">
                   Our rings and bracelets feature flawless emeralds, each
                   hand-selected for their vibrant green hue and unparalleled
                   clarity. The emeralds are elegantly set in sleek, contemporary
                   designs that reflect the new-age spirit of TOLA, where
                   minimalism meets sophistication.
                 </p1>
-                <img
-                  className="z-10 opacity-1 w-[45vw] "
-                  src="model2.avif"
-                  alt="model"
-                />
               </div>
               <div
                 ref={slide3}
-                className="flex justify-start mt-[200px] items-center"
+                className="flex flex-col justify-start mt-[200px] gap-20  items-center bg-[#d5a87e]"
               >
-                <img
-                  className="z-10 opacity-1 w-[45vw]"
-                  src="/model3.avif"
-                  alt="model"
-                />
-                <p1 className="px-[10vw]  py-[21vw]pl-24 pr-24 text-[18px] bg-gray-950">
-                  The necklace features a sleek, modern chain design accented
-                  with sparkling diamonds, meticulously set to capture light
-                  from every angle. The industrial aesthetic of the chain
-                  provides a striking contrast to the elegance of the pearls.
-                </p1>
+                <div className=" relative w-full h-[34.5vh] overflow-hidden">
+                  <div className="flex justify-center  w-full h-full">
+                    <video
+                      className=" absolute z-50 w-[50.7vw] h-[55vh] rounded-3xl"
+                      src="/work.mp4"
+                      autoPlay
+                      controls={false}
+                      loop
+                      muted
+                      playsInline
+                    />
+                  </div>
+                </div>
+                <div className=" flex w-full justify-center mb-[40px]">
+                  <p1 className="px-[10vw] w-[80%]   text-[18px] ">
+                    Our heritage is deeply rooted in craftsmanship. Every TOLA
+                    piece is meticulously handcrafted by skilled artisans who
+                    bring decades of experience to each creation. Whether it’s
+                    the precision of a setting or the subtle elegance of a
+                    finishing touch, our commitment to craftsmanship is evident
+                    in every facet of our jewelry.
+                  </p1>
+                </div>
               </div>
             </div>
           </div>
@@ -559,59 +673,59 @@ function App() {
             </div>
           </div>
           {/* FOOTER FROM HERE */}
-          <footer ref={footerref} className="gird grid-rows-2 pb-6">
+          <footer ref={footerref} className="gird grid-rows-2 pb-0">
             <div>
-              <div className="w-full flex justify-center p-20 ">
-                <img
+              <div className="w-full flex justify-center p-10 ">
+                {/* <img
                   className="  w-[8vw]   mt-8 "
                   src="/logobwr.png"
                   alt="logo"
-                />
+                /> */}
               </div>
-              <div className=" grid grid-cols-8 items-center justify-center text-center bg-black pb-20 pt-10 gap-[85px] pl-[260px] pr-[250px]">
-                <div className="col-span-4 grid grid-cols-3 text-xs text-white  text-right">
+              <div className=" grid grid-cols-8 items-center justify-center text-center bg-black text-black  pb-20 pt-10 gap-[85px] pl-[260px] pr-[250px]">
+                <div className="col-span-4 grid grid-cols-3 text-xs  text-right">
                   SERVICES
-                  <div className=" text-xs text-white col-span-1 justify-end flex">
+                  <div className=" text-xs  col-span-1 justify-end flex">
                     CARRER
                   </div>
-                  <div className=" text-xs text-white col-span-1 justify-end flex">
+                  <div className=" text-xs col-span-1 justify-end flex">
                     CONTACT US
                   </div>
                 </div>
-                <div className="col-span-4 grid grid-cols-2 text-xs text-white">
-                  <div className=" text-xs text-white col-span-1 justify-start flex">
+                <div className="col-span-4 grid grid-cols-2 text-xs ">
+                  <div className=" text-xs  col-span-1 justify-start flex">
                     DANCE REFLECTION BY TOLA & Co
                   </div>
                   SCHOOL OF JEWELRY DESIGN
                 </div>
               </div>
             </div>
-            <div className="pl-[430px] pr-[430px]  pt-10 pb-20 grid col-span-2 text-center ">
-              <div className="col-span-4 grid grid-cols-5 text-xs text-white  ">
+            <div className="pl-[430px] pr-[430px]  pt-10 pb-10 grid col-span-2 text-center ">
+              <div className="col-span-4 grid grid-cols-5 text-xs  ">
                 LINKEDIN
-                <div className=" text-xs text-white col-span-1 justify-center flex">
+                <div className=" text-xs  col-span-1 justify-center flex">
                   YOUTUBE
                 </div>
-                <div className=" text-xs text-white col-span-1  flex justify-center">
+                <div className=" text-xs col-span-1  flex justify-center">
                   LEGAL
                 </div>
-                <div className=" text-xs text-white col-span-1  flex justify-center">
+                <div className=" text-xs  col-span-1  flex justify-center">
                   PINTREST
                 </div>
-                <div className=" text-xs text-white col-span-1  flex justify-center">
+                <div className=" text-xs  col-span-1  flex justify-center">
                   INSTAGRAM
                 </div>
               </div>
             </div>
           </footer>
-          <div className="border-t border-white my-4"></div>
+          <div className="border-t border-black my-4"></div>
           <div className=" grid grid-cols-12 w-full bg-red p-10 text-white justify-center text-center pl-[480px] pr-[480px]">
             <div className="col-span-4 ">Privacy policy</div>
             <div className="col-span-4 ">CSR policy</div>
             <div className="col-span-4">Condition of Sale</div>
           </div>
-          <div className="flex justify-center text-white p-10">
-            Copyright © 2024 All rights reserved Tola & Co{" "}
+          <div className="flex justify-center text-[20px] bg-black text-white p-10">
+            Copyright © 2024 All rights reserved Tola & Co
           </div>
         </div>
       </div>
