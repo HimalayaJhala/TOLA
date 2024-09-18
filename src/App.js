@@ -596,7 +596,7 @@ function App() {
                 <div className=" relative w-full h-[34.5vh] overflow-hidden">
                   <div className="flex justify-center  w-full h-full">
                     <video
-                      className=" absolute z-50 w-[50.7vw] h-[55vh] rounded-3xl"
+                      className=" absolute z-50  w-[50.7vw] h-[55vh] rounded-3xl"
                       src="/work.mp4"
                       autoPlay
                       controls={false}
