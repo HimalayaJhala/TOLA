@@ -97,7 +97,7 @@ function App() {
   useEffect(() => {
     gsap.to(headingRef.current, {
       textShadow:
-        "0 0 5px rgba(255, 215, 0, 1), 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.7)",
+        "0 0 5px rgba(255, 215, 0, 1), 0 0 5px rgba(255, 215, 0, 0.8), 0 0 5px rgba(255, 215, 0, 0.7)",
     });
   }, []);
 
@@ -317,7 +317,7 @@ function App() {
             </h3>
           </div>
 
-          <div className="flex justify-center items-center  text-white text-[30px] font-serif relative left-32">
+          <div className="flex justify-center items-center  text-black text-[30px] font-serif  relative left-32">
             <h6
               style={{
                 transform: "scaleY(1.15)",
@@ -329,22 +329,22 @@ function App() {
             </h6>
           </div>
 
-          <div className="flex gap-20 p-10 ">
+          <div className="flex gap-20 p-10  ">
             <h3
               ref={(el) => (h3Refs.current[1] = el)}
-              className="text-white text-[18px]  normal-case"
+              className="text-black text-[18px]  normal-case"
             >
               Contact
             </h3>
             <h3
               ref={(el) => (h3Refs.current[2] = el)}
-              className="text-white text-[18px]     normal-case"
+              className="text-black text-[18px]     normal-case"
             >
               About
             </h3>
             <h3
               ref={(el) => (h3Refs.current[3] = el)}
-              className="text-white text-[18px]   normal-case"
+              className="text-black text-[18px]   normal-case"
             >
               Design
             </h3>
@@ -404,10 +404,10 @@ function App() {
                   <p className="text-[20px]">Embrace the perfection</p>
                 </div>
                 <div className=" flex gap-14 mt-8">
-                  <button className=" bg-[#e6bb4e] py-2 px-10 text-black ">
+                  <button className=" bg-[#ffffff] py-2 px-10 text-black ">
                     Shop now
                   </button>
-                  <button className="bg-[#e6bb4e] py-2  px-10 text-black ">
+                  <button className="bg-[#717171] py-2  px-10 text-black ">
                     Discover more{" "}
                   </button>
                 </div>
@@ -628,19 +628,19 @@ function App() {
                   src="/icons8.png"
                   alt="logo"
                 />
-                <p className=" flex justify-center max-w-[40%] md:max-w-[70%]">
+                <p className=" flex justify-center max-w-[40%] text-black md:max-w-[70%]">
                   CUSTOMER SERVICE LIVE CHAT Need help? Speak to our Customer
                   Service team
                 </p>
               </div>
-              <div className="col-span-12 md:col-span-4 flex flex-col items-center justify-center text-center pl-8 pr-8">
+              <div className="col-span-12 md:col-span-4 flex text-black flex-col items-center justify-center text-center pl-8 pr-8">
                 <img className="p-5" src="/icons9.png" alt="logo" />
                 <p className=" flex justify-center max-w-[40%] md:max-w-[70%]">
                   CUSTOMER SERVICE Explore answers to our FAQs or connect with
                   our Customer Service team.
                 </p>
               </div>
-              <div className="col-span-12 md:col-span-4 flex flex-col items-center justify-center text-center">
+              <div className="col-span-12 md:col-span-4 flex flex-col text-black items-center justify-center text-center">
                 <img className="p-5 flex" src="/icon10.png" alt="logo" />
                 <p className=" flex justify-center max-w-[40%] md:max-w-[70%]">
                   GIFT SERVICES Add a personalized touch
@@ -682,7 +682,7 @@ function App() {
                   alt="logo"
                 /> */}
               </div>
-              <div className=" grid grid-cols-8 items-center justify-center text-center bg-black text-black  pb-20 pt-10 gap-[85px] pl-[260px] pr-[250px]">
+              <div className=" grid grid-cols-8 items-center justify-center text-center bg-black text-white  pb-20 pt-10 gap-[85px] pl-[260px] pr-[250px]">
                 <div className="col-span-4 grid grid-cols-3 text-xs  text-right">
                   SERVICES
                   <div className=" text-xs  col-span-1 justify-end flex">
